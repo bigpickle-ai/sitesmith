@@ -1,0 +1,92 @@
+{
+  "demo": true,
+  "nombre": "Bar La Encina",
+  "lema": "Cocina casera del Bierzo, tapas y buena conversación en el centro de Ponferrada.",
+  "sector": "Bar de tapas y cocina casera",
+  "tipo_negocio": "BarOrPub",
+  "titular": "Bar La Encina (negocio de ejemplo)",
+  "telefono": "987 000 000",
+  "whatsapp": "34600000000",
+  "direccion": "Calle del Reloj, 12, 24401 Ponferrada, León",
+  "mapa": "",
+  "colores": {
+    "acento": "#7a1f1f"
+  },
+  "nota_horario": "Los festivos abrimos de 12:00 a 17:00. En agosto cerramos del 10 al 20.",
+  "horario": [
+    ["Lunes", "Cerrado"],
+    ["Martes", "08:00 – 16:00 y 19:00 – 23:30"],
+    ["Miércoles", "08:00 – 16:00 y 19:00 – 23:30"],
+    ["Jueves", "08:00 – 16:00 y 19:00 – 23:30"],
+    ["Viernes", "08:00 – 16:00 y 19:00 – 00:30"],
+    ["Sábado", "10:00 – 16:00 y 19:00 – 00:30"],
+    ["Domingo", "10:00 – 16:00"]
+  ],
+  "carta": [
+    {
+      "nombre": "Para picar",
+      "platos": [
+        {
+          "nombre": "Patatas bravas de la casa",
+          "descripcion": "Patata fresca, salsa brava suave y alioli de ajo negro",
+          "precio": "5,50 €"
+        },
+        {
+          "nombre": "Pimientos de Padrón",
+          "descripcion": "Con sal gorda y un chorro de aceite de oliva virgen",
+          "precio": "6,00 €"
+        },
+        {
+          "nombre": "Cecina del Bierzo",
+          "descripcion": "Cortada a cuchillo, con aceite de oliva y pan de centeno",
+          "precio": "9,50 €"
+        },
+        {
+          "nombre": "Croquetas de jamón",
+          "descripcion": "Seis unidades, hechas cada mañana",
+          "precio": "8,00 €"
+        }
+      ]
+    },
+    {
+      "nombre": "Platos de cuchara",
+      "platos": [
+        {
+          "nombre": "Botillo del Bierzo",
+          "descripcion": "Con patata, garbanzo y berza. Disponible de jueves a domingo",
+          "precio": "14,00 €"
+        },
+        {
+          "nombre": "Sopa de ajo",
+          "descripcion": "Receta de la abuela, con pan del día y huevo",
+          "precio": "6,50 €"
+        },
+        {
+          "nombre": "Lentejas con chorizo",
+          "descripcion": "Cocinadas a fuego lento, ración abundante",
+          "precio": "8,50 €"
+        }
+      ]
+    },
+    {
+      "nombre": "Postres y café",
+      "platos": [
+        {
+          "nombre": "Tarta de queso al horno",
+          "descripcion": "Con mermelada de arándanos",
+          "precio": "4,50 €"
+        },
+        {
+          "nombre": "Café de puchero",
+          "descripcion": "",
+          "precio": "1,80 €"
+        },
+        {
+          "nombre": "Menú del día",
+          "descripcion": "Primero, segundo, postre, pan y bebida. De martes a viernes",
+          "precio": "13,50 €"
+        }
+      ]
+    }
+  ]
+}
