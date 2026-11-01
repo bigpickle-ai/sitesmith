@@ -3,6 +3,9 @@
 Genera la web completa de un negocio local a partir de un archivo de texto
 (JSON) y la deja lista para publicar.
 
+**Demo en vivo:** <https://bigpickle-ai.github.io/sitesmith-demo/>
+(negocio inventado, con aviso de que es un ejemplo).
+
 Un solo comando produce **un único archivo `index.html`**: sin base de datos,
 sin cookies, sin JavaScript, sin dependencias. Funciona en GitHub Pages, en
 cualquier hosting o abriéndolo desde el propio ordenador.
