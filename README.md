@@ -126,7 +126,9 @@ WhatsApp y teléfono, y que no haya rastreadores de terceros.
 | `agente/sandbox.py` | lanza el código aislado y con límites de memoria y tiempo |
 | `agente/validador.py` | programa de revisión que se ejecuta dentro de la caja |
 | `agente/agente.py` | orquesta los pasos y escribe el informe |
+| `agente/servidor.py` | mini aplicación web (formulario, vista previa, informe) |
 | `agente/test_sandbox.py` | 11 pruebas: red cortada, `/home` oculto, tiempo, memoria |
+| `agente/test_servidor.py` | 8 pruebas: formulario, generación, rutas traviesas, límites |
 
 ```bash
 cd ~/sitios/agente && python3 -m unittest -v
@@ -134,6 +136,33 @@ cd ~/sitios/agente && python3 -m unittest -v
 
 Si falta `bubblewrap`, la generación sigue funcionando pero la revisión avisa
 de que no se puede aislar: `sudo apt install bubblewrap`.
+
+## Mini aplicación web
+
+Formulario para generar la web de un negocio desde el navegador. Escucha solo
+en este equipo (`127.0.0.1`), así que no queda expuesta a internet.
+
+```bash
+cd ~/sitios
+python3 agente/servidor.py --abrir        # http://127.0.0.1:8099
+python3 agente/servidor.py --puerto 8100  # otro puerto
+```
+
+O pulsar el acceso del escritorio **«SITE SMITH (web)»**, que arranca el
+servidor si hace falta y abre la ventana.
+
+| Ruta | Qué devuelve |
+|---|---|
+| `/` | formulario (nombre, frase, dirección, teléfono, WhatsApp) |
+| `POST /generar` | página con el resultado, la vista previa y la tabla de pasos |
+| `/vista/<negocio>/` | la web generada, tal cual se publicaría |
+| `/informe/<negocio>/informe.json` | el informe con lo que se ejecutó |
+
+Detalles de seguridad: solo acepta peticiones de este equipo, limita el cuerpo
+a 64 KB, el nombre del negocio se convierte en un identificador seguro
+(`Bar La Encina` → `bar-la-encina`) y ninguna ruta puede salir de `salidas/`.
+La generación escribe en `salidas/<negocio>/` con `index.html` e
+`informe.json`.
 
 ## Estructura
 
