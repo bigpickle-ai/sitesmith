@@ -233,6 +233,19 @@ def generar(datos: dict, salida: Path) -> Path:
             "la dirección y el teléfono son inventados. La hace un programa "
             "a partir de los datos reales del negocio.</div>"
         )
+    elif datos.get("muestra"):
+        # Muestra preparada para un negocio real que todavía no ha dicho que sí.
+        aviso_demo = (
+            '<div class="aviso-demo"><strong>Muestra gratuita.</strong> Esta web '
+            "está preparada para que veas cómo quedaría la tuya. Todavía no "
+            "tiene tus fotos ni tu carta de verdad: dime qué cambio y la dejo "
+            "lista.</div>"
+        )
+    # Ni los ejemplos ni las muestras deben aparecer en Google: hablan de
+    # negocios que no las han encargado.
+    robots = (
+        '<meta name="robots" content="noindex">' if datos.get("demo") or datos.get("muestra") else ""
+    )
     flotante = (
         f'<a class="boton-flotante" href="https://wa.me/{e(whatsapp)}">WhatsApp</a>'
         if whatsapp else ""
@@ -265,6 +278,7 @@ def generar(datos: dict, salida: Path) -> Path:
 <meta property="og:title" content="{e(nombre)}">
 <meta property="og:description" content="{e(lema)}">
 <meta property="og:type" content="website">
+{robots}
 <meta name="theme-color" content="{e(acento or "#7a1f1f")}">
 <style>{BASE_CSS}
 {color_css}</style>

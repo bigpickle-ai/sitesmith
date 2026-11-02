@@ -159,6 +159,30 @@ class AgenteTest(unittest.TestCase):
         self.assertIn('href="#carta">Servicios</a>', html)
         self.assertNotIn("Nuestra carta", html)
 
+    def test_la_muestra_avisa_y_no_se_indexa(self):
+        """Una muestra es para un negocio real que aún no ha dicho que sí:
+        tiene que avisar de que es una muestra y no salir en Google."""
+        datos = json.loads(EJEMPLO.read_text(encoding="utf-8"))
+        del datos["demo"]
+        datos["muestra"] = True
+        salida = Path("/tmp/opencode/prueba-muestra")
+        agente.trabajar(datos, salida)
+        html = (salida / "index.html").read_text(encoding="utf-8")
+        self.assertIn("Muestra gratuita", html)
+        self.assertIn('<meta name="robots" content="noindex">', html)
+        self.assertNotIn("Web de ejemplo", html)
+
+    def test_un_negocio_de_verdad_no_lleva_aviso_ni_noindex(self):
+        """La web que se entrega al cliente que paga va limpia."""
+        datos = json.loads(EJEMPLO.read_text(encoding="utf-8"))
+        del datos["demo"]
+        salida = Path("/tmp/opencode/prueba-cliente")
+        agente.trabajar(datos, salida)
+        html = (salida / "index.html").read_text(encoding="utf-8")
+        self.assertNotIn("aviso-demo", html.split("</style>", 1)[1])
+        self.assertNotIn("noindex", html)
+        self.assertNotIn("inventados", html)
+
 
 if __name__ == "__main__":
     unittest.main()
