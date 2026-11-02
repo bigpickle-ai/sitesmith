@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SiteSmith — web para tu negocio</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header>
+  <div class="envoltorio">
+    <h1>SiteSmith</h1>
+    <p>Genera la web de tu negocio en el navegador. Se revisa ejecutando código.</p>
+  </div>
+</header>
+<main class="envoltorio rejilla">
+  <section class="panel">
+    <h2>Datos del negocio</h2>
+    <label for="nombre">Nombre del negocio <b>(obligatorio)</b></label>
+    <input id="nombre" autocomplete="off" placeholder="Bar La Encina">
+    <label for="lema">Frase corta <b>(obligatorio)</b></label>
+    <input id="lema" autocomplete="off" placeholder="Tapas y cocina casera">
+    <label for="direccion">Dirección <b>(obligatorio)</b></label>
+    <input id="direccion" autocomplete="off" placeholder="Calle Vista Alegre, 13 - Ponferrada">
+    <label for="telefono">Teléfono <b>(obligatorio)</b></label>
+    <input id="telefono" autocomplete="off" placeholder="987 000 000">
+    <label for="whatsapp">WhatsApp (opcional)</label>
+    <input id="whatsapp" autocomplete="off" placeholder="34600000000">
+    <button id="generar">Generar la web</button>
+    <button id="ejemplo" class="boton secundario" type="button">Rellenar con un ejemplo</button>
+    <p id="estado" class="tenue"></p>
+  </section>
+  <section class="panel">
+    <h2>Resultado</h2>
+    <div id="pasos"></div>
+    <div class="acciones">
+      <a id="abrir" class="boton oculto" target="_blank">Abrir a pantalla completa</a>
+      <a id="descargar" class="boton secundario oculto" download="index.html">Descargar HTML</a>
+    </div>
+    <iframe id="vista" class="oculto" title="Vista previa"></iframe>
+    <h3 class="oculto" id="titulo-informe">Revisión (ejecutada en el navegador)</h3>
+    <pre id="informe" class="informe oculto"></pre>
+  </section>
+</main>
+<footer>
+  <div class="envoltorio">
+    <p>SiteSmith — sin servidor, sin cookies, sin rastreadores.
+       Código: <a href="https://github.com/bigpickle-ai/sitesmith">github.com/bigpickle-ai/sitesmith</a></p>
+  </div>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
