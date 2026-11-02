@@ -272,6 +272,7 @@ def generar(datos: dict, salida: Path) -> Path:
 <nav class="menu" aria-label="Secciones">
   <div class="envoltorio"><ul>{"".join(enlaces_nav)}</ul></div>
 </nav>
+<main>
 {seccion_carta}
 {seccion_horario}
 <section id="donde">
@@ -282,6 +283,7 @@ def generar(datos: dict, salida: Path) -> Path:
     {boton_tel}
   </div>
 </section>
+</main>
 <footer>
   <div class="envoltorio">
     <p><strong>{e(nombre)}</strong> · {e(direccion)} · {e(telefono)}</p>

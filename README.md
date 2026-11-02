@@ -100,16 +100,57 @@ Antes de entregar una web a un cliente conviene revisar:
 3. Que los precios y el horario están al día.
 4. Que el nombre del `titular` del aviso legal es el real.
 
+## Agente con caja de arena
+
+`agente/` es la versión que hace todo el recorrido sola: lee los datos, escribe
+la web y la **revisa ejecutando código de verdad** dentro de una caja aislada
+(`bubblewrap`): sin red, sin acceso a `/home` y con el directorio de trabajo
+temporal. Al final deja un `informe.json` con cada paso, lo que se ejecutó y
+cuánto tardó.
+
+```bash
+cd ~/sitios
+python3 agente/agente.py negocios/bar-ejemplo.json
+# -> salidas/bar-ejemplo/index.html + salidas/bar-ejemplo/informe.json
+
+python3 agente/agente.py negocios/bar-ejemplo.json --json   # informe en pantalla
+```
+
+Qué comprueba la revisión: etiquetas cerradas y obligatorias (`html`, `head`,
+`title`, `h1`, `main`), marcadores `{...}` sin sustituir, `<title>` y
+`description`, `viewport`, idioma, enlace al aviso legal, JSON-LD válido,
+WhatsApp y teléfono, y que no haya rastreadores de terceros.
+
+| Fichero | Para qué sirve |
+|---|---|
+| `agente/sandbox.py` | lanza el código aislado y con límites de memoria y tiempo |
+| `agente/validador.py` | programa de revisión que se ejecuta dentro de la caja |
+| `agente/agente.py` | orquesta los pasos y escribe el informe |
+| `agente/test_sandbox.py` | 11 pruebas: red cortada, `/home` oculto, tiempo, memoria |
+
+```bash
+cd ~/sitios/agente && python3 -m unittest -v
+```
+
+Si falta `bubblewrap`, la generación sigue funcionando pero la revisión avisa
+de que no se puede aislar: `sudo apt install bubblewrap`.
+
 ## Estructura
 
 ```
 sitios/
 ├── sitio.py                  generador (Python 3, sin dependencias)
+├── agente/                   ejecución aislada + revisión automática
+│   ├── sandbox.py
+│   ├── validador.py
+│   ├── agente.py
+│   └── test_sandbox.py
 ├── negocios/                 un JSON por negocio
 │   └── bar-ejemplo.json
 └── salidas/
     └── bar-ejemplo/
-        └── index.html        web lista para publicar
+        ├── index.html        web lista para publicar
+        └── informe.json      qué hizo el agente, paso a paso
 ```
 
 ## Publicar en GitHub Pages
@@ -128,4 +169,5 @@ Queda en `https://bigpickle-ai.github.io/bar-la-encina/`.
 
 ## Requisitos
 
-Python 3.8 o superior. Nada más: no usa librerías externas.
+Python 3.8 o superior y, para la revisión automática, `bubblewrap`
+(`sudo apt install bubblewrap`). El generador no usa librerías externas.
