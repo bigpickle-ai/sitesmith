@@ -1,0 +1,50 @@
+{
+  "demo": true,
+  "nombre": "Bierzo Fitness",
+  "lema": "Gimnasio de barrio en Ponferrada: sala de musculación, clases dirigidas y entrenador para empezar sin miedo.",
+  "sector": "Gimnasio y entrenamiento",
+  "tipo_negocio": "HealthClub",
+  "titular": "Bierzo Fitness (negocio de ejemplo)",
+  "telefono": "987 000 222",
+  "whatsapp": "34600000222",
+  "direccion": "Calle Compostilla, 8, 24404 Ponferrada, León",
+  "colores": { "acento": "#0f766e" },
+  "titulo_carta": "Cuotas y servicios",
+  "etiqueta_carta": "Cuotas",
+  "nota_horario": "El primer día te enseñamos las instalaciones y te preparamos una tabla. Sin matrícula hasta final de mes.",
+  "horario": [
+    ["Lunes", "07:00 – 22:30"],
+    ["Martes", "07:00 – 22:30"],
+    ["Miércoles", "07:00 – 22:30"],
+    ["Jueves", "07:00 – 22:30"],
+    ["Viernes", "07:00 – 22:00"],
+    ["Sábado", "09:00 – 14:00"],
+    ["Domingo", "Cerrado"]
+  ],
+  "carta": [
+    {
+      "nombre": "Cuotas mensuales",
+      "platos": [
+        { "nombre": "Sala de musculación", "descripcion": "Acceso libre en todo el horario", "precio": "29 €/mes" },
+        { "nombre": "Sala + clases dirigidas", "descripcion": "Spinning, zumba y funcional", "precio": "39 €/mes" },
+        { "nombre": "Matrícula", "descripcion": "Gratis este mes", "precio": "0 €" },
+        { "nombre": "Bono de 10 sesiones", "descripcion": "Para quien viene de vez en cuando", "precio": "55 €" }
+      ]
+    },
+    {
+      "nombre": "Clases",
+      "platos": [
+        { "nombre": "Spinning", "descripcion": "45 minutos, de lunes a jueves a las 20:00", "precio": "Incluido" },
+        { "nombre": "Funcional", "descripcion": "Fuerza y movilidad, martes y jueves a las 19:00", "precio": "Incluido" },
+        { "nombre": "Zumba", "descripcion": "Sábados a las 11:00", "precio": "Incluido" }
+      ]
+    },
+    {
+      "nombre": "Entrenamiento personal",
+      "platos": [
+        { "nombre": "Sesión individual", "descripcion": "Una hora con entrenador", "precio": "25 €" },
+        { "nombre": "Bono de 8 sesiones", "descripcion": "Plan de entrenamiento incluido", "precio": "170 €" }
+      ]
+    }
+  ]
+}

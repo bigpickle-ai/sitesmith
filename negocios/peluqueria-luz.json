@@ -1,0 +1,51 @@
+{
+  "demo": true,
+  "nombre": "Peluquería Luz",
+  "lema": "Corte, color y cuidado del cabello en el centro de Ponferrada, con cita previa por WhatsApp.",
+  "sector": "Peluquería y estética",
+  "tipo_negocio": "HairSalon",
+  "titular": "Peluquería Luz (negocio de ejemplo)",
+  "telefono": "987 000 111",
+  "whatsapp": "34600000111",
+  "direccion": "Avenida de España, 24, 24400 Ponferrada, León",
+  "colores": { "acento": "#8e3b6b" },
+  "titulo_carta": "Servicios y precios",
+  "etiqueta_carta": "Servicios",
+  "nota_horario": "Los martes trabajamos solo con cita. Cerramos la última semana de agosto.",
+  "horario": [
+    ["Lunes", "Cerrado"],
+    ["Martes", "10:00 – 14:00"],
+    ["Miércoles", "10:00 – 14:00 y 16:00 – 20:00"],
+    ["Jueves", "10:00 – 14:00 y 16:00 – 20:00"],
+    ["Viernes", "10:00 – 14:00 y 16:00 – 20:00"],
+    ["Sábado", "09:30 – 14:00"],
+    ["Domingo", "Cerrado"]
+  ],
+  "carta": [
+    {
+      "nombre": "Corte y peinado",
+      "platos": [
+        { "nombre": "Corte mujer", "descripcion": "Lavado, corte y secado", "precio": "18 €" },
+        { "nombre": "Corte hombre", "descripcion": "Máquina y tijera, con lavado", "precio": "13 €" },
+        { "nombre": "Corte niño", "descripcion": "Hasta 12 años", "precio": "10 €" },
+        { "nombre": "Peinado para evento", "descripcion": "Recogido o ondas, con fijación", "precio": "25 €" }
+      ]
+    },
+    {
+      "nombre": "Color",
+      "platos": [
+        { "nombre": "Color de raíz", "descripcion": "Tinte sin amoniaco", "precio": "28 €" },
+        { "nombre": "Mechas o balayage", "descripcion": "Incluye matiz y tratamiento", "precio": "45 €" },
+        { "nombre": "Reflejos", "descripcion": "Papel de plata, precio según largo", "precio": "desde 32 €" }
+      ]
+    },
+    {
+      "nombre": "Cuidado y estética",
+      "platos": [
+        { "nombre": "Hidratación profunda", "descripcion": "Mascarilla y masaje capilar", "precio": "15 €" },
+        { "nombre": "Depilación de cejas", "descripcion": "Con cera tibia", "precio": "6 €" },
+        { "nombre": "Manicura", "descripcion": "Limado, cutícula y esmalte", "precio": "12 €" }
+      ]
+    }
+  ]
+}

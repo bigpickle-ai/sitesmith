@@ -1,0 +1,48 @@
+{
+  "demo": true,
+  "nombre": "Mesón Camino Real",
+  "lema": "Cocina berciana de toda la vida, menú del día y carnes a la brasa, a dos pasos de la calle del Reloj.",
+  "sector": "Restaurante de cocina berciana",
+  "tipo_negocio": "Restaurant",
+  "titular": "Mesón Camino Real (negocio de ejemplo)",
+  "telefono": "987 000 333",
+  "whatsapp": "34600000333",
+  "direccion": "Plaza del Ayuntamiento, 3, 24401 Ponferrada, León",
+  "colores": { "acento": "#7a4a1f" },
+  "nota_horario": "Reservas por WhatsApp. Grupos de más de 8 personas, avisad con un día.",
+  "horario": [
+    ["Lunes", "Cerrado"],
+    ["Martes", "13:00 – 16:00"],
+    ["Miércoles", "13:00 – 16:00 y 20:30 – 23:00"],
+    ["Jueves", "13:00 – 16:00 y 20:30 – 23:00"],
+    ["Viernes", "13:00 – 16:00 y 20:30 – 23:30"],
+    ["Sábado", "13:00 – 16:30 y 20:30 – 23:30"],
+    ["Domingo", "13:00 – 16:30"]
+  ],
+  "carta": [
+    {
+      "nombre": "Para empezar",
+      "platos": [
+        { "nombre": "Tabla de embutidos del Bierzo", "descripcion": "Cecina, chorizo y botillo, para dos", "precio": "14 €" },
+        { "nombre": "Pimientos asados", "descripcion": "Con aceite de oliva y ajo", "precio": "7 €" },
+        { "nombre": "Sopa de castañas", "descripcion": "Receta de otoño", "precio": "6 €" }
+      ]
+    },
+    {
+      "nombre": "Platos principales",
+      "platos": [
+        { "nombre": "Botillo del Bierzo", "descripcion": "Con patata, garbanzo y berza. Jueves a domingo", "precio": "15 €" },
+        { "nombre": "Chuletón de vaca vieja", "descripcion": "A la brasa, para dos, con guarnición", "precio": "42 €" },
+        { "nombre": "Trucha del Cúa", "descripcion": "A la plancha con jamón y pimientos", "precio": "16 €" },
+        { "nombre": "Menú del día", "descripcion": "Primero, segundo, postre, pan y bebida. De martes a viernes", "precio": "14 €" }
+      ]
+    },
+    {
+      "nombre": "Postres",
+      "platos": [
+        { "nombre": "Tarta de Santiago", "descripcion": "Con helado de leche merengada", "precio": "5 €" },
+        { "nombre": "Arroz con leche", "descripcion": "Con canela y azúcar tostado", "precio": "4 €" }
+      ]
+    }
+  ]
+}

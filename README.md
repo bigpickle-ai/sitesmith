@@ -6,6 +6,10 @@ Genera la web completa de un negocio local a partir de un archivo de texto
 **Demo en vivo:** <https://bigpickle-ai.github.io/sitesmith-demo/>
 (negocio inventado, con aviso de que es un ejemplo).
 
+**Aplicación web pública:** <https://bigpickle-ai.github.io/sitesmith/>
+(formulario; genera y revisa la web **dentro del navegador** con Pyodide, sin
+servidor ni cuentas).
+
 Un solo comando produce **un único archivo `index.html`**: sin base de datos,
 sin cookies, sin JavaScript, sin dependencias. Funciona en GitHub Pages, en
 cualquier hosting o abriéndolo desde el propio ordenador.
@@ -82,6 +86,10 @@ Notas de los campos:
   `Bakery`, `Store`…). Por defecto `LocalBusiness`.
 - `horario`: pares `["Día", "horas"]`. Si las horas son «Cerrado», el día se
   marca y no se manda a Google como horario de apertura.
+- `titulo_carta` y `etiqueta_carta`: para sectores que no venden comida. Una
+  peluquería pone `"titulo_carta": "Servicios y precios"` y
+  `"etiqueta_carta": "Servicios"`; un gimnasio, `"Cuotas y servicios"` y
+  `"Cuotas"`. Si no se ponen, salen «Nuestra carta» y «Carta».
 
 ## Comprobar el resultado
 
@@ -195,6 +203,21 @@ gh api -X POST repos/bigpickle-ai/bar-la-encina/pages \
 ```
 
 Queda en `https://bigpickle-ai.github.io/bar-la-encina/`.
+
+## Cómo está publicada la aplicación web
+
+GitHub Pages solo sirve ficheros estáticos, así que la aplicación no usa
+servidor: carga **Pyodide** (Python compilado a WebAssembly) y ejecuta ahí
+mismo `sitio.py` y `agente/revisor.py`. Son los mismos ficheros que usa la
+consola, no copias.
+
+- `index.html` (raíz): redirige a `demo/`.
+- `demo/index.html`, `demo/estilos.css`, `demo/app.js`: formulario, vista
+  previa en un `iframe` y tabla de pasos con tiempos.
+- La primera visita descarga unos 10 MB de Python; luego queda en caché del
+  navegador.
+
+Para activarlo: *Settings → Pages → Deploy from a branch → `main` → `/`*.
 
 ## Requisitos
 

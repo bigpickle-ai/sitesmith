@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesón Camino Real — Restaurante de cocina berciana</title>
+<meta name="description" content="Cocina berciana de toda la vida, menú del día y carnes a la brasa, a dos pasos de la calle del Reloj.">
+<meta property="og:title" content="Mesón Camino Real">
+<meta property="og:description" content="Cocina berciana de toda la vida, menú del día y carnes a la brasa, a dos pasos de la calle del Reloj.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#7a4a1f">
+<style>:root{
+  --tinta:#1a1613; --papel:#fbf8f3; --suave:#6f6459; --linea:#e2d9cc;
+  --acento:#7a1f1f; --acento-texto:#ffffff; --tarjeta:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --tinta:#f3ede4; --papel:#14110f; --suave:#b6a99a; --linea:#332c26;
+         --acento:#e0705f; --acento-texto:#1a1210; --tarjeta:#1d1917; }
+}
+*{box-sizing:border-box}
+html{font-size:19px;scroll-behavior:smooth}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 .4em}
+h1{font-size:2.6rem}h2{font-size:1.9rem}h3{font-size:1.25rem}
+a{color:var(--acento)}
+img{max-width:100%;height:auto;border-radius:12px}
+.envoltorio{max-width:960px;margin:0 auto;padding:0 20px}
+header.portada{background:var(--acento);color:var(--acento-texto);padding:56px 0 48px}
+header.portada p{margin:.4em 0 1.4em;font-size:1.15rem;opacity:.92}
+nav.saltar a{color:inherit}
+.boton{display:inline-block;padding:16px 26px;border-radius:12px;font-weight:700;
+  text-decoration:none;background:var(--acento);color:var(--acento-texto);
+  border:2px solid currentColor;font-size:1.05rem}
+header.portada .boton{background:var(--acento-texto);color:var(--acento);border-color:transparent}
+.boton.secundario{background:transparent;color:var(--acento)}
+section{padding:52px 0;border-top:1px solid var(--linea)}
+nav.menu{position:sticky;top:0;background:var(--papel);border-bottom:1px solid var(--linea);z-index:5}
+nav.menu ul{display:flex;gap:6px;list-style:none;margin:0;padding:10px 0;overflow-x:auto}
+nav.menu a{padding:10px 14px;border-radius:10px;text-decoration:none;color:var(--tinta);white-space:nowrap}
+nav.menu a:hover{background:var(--linea)}
+.rejilla{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.tarjeta{background:var(--tarjeta);border:1px solid var(--linea);border-radius:14px;padding:18px}
+.plato{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dotted var(--linea)}
+.plato:last-child{border-bottom:0}
+.plato strong{font-weight:600}
+.plato span.precio{white-space:nowrap;font-variant-numeric:tabular-nums}
+.plato small{display:block;color:var(--suave);font-size:.9rem}
+table.horario{width:100%;border-collapse:collapse}
+table.horario td{padding:8px 0;border-bottom:1px solid var(--linea)}
+table.horario td:last-child{text-align:right;color:var(--suave)}
+tr.cerrado td{color:var(--suave);font-style:italic}
+a:focus-visible,.boton:focus-visible,nav.menu a:focus-visible{
+  outline:3px solid var(--acento);outline-offset:3px;border-radius:8px}
+.aviso-demo{background:#fff3cd;color:#4a3b00;border-bottom:3px solid #e0a800;
+  padding:14px 20px;font-size:1rem;text-align:center;line-height:1.5}
+@media (prefers-color-scheme: dark){
+  .aviso-demo{background:#3a2f00;color:#ffe9a8;border-bottom-color:#e0a800}
+}
+footer{padding:36px 0 120px;color:var(--suave);font-size:.9rem;border-top:1px solid var(--linea)}
+.boton-flotante{position:fixed;right:18px;bottom:18px;z-index:20;border-radius:999px;
+  padding:16px 22px;background:var(--acento);color:var(--acento-texto);
+  text-decoration:none;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+@media (max-width:600px){ html{font-size:18px} h1{font-size:2rem} header.portada{padding:40px 0 34px} }
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+:root{--acento:#7a4a1f;--acento-texto:#ffffff}@media (prefers-color-scheme: dark){:root{--acento:#d28b4c;--acento-texto:#12100e}}</style>
+</head>
+<body>
+<div class="aviso-demo"><strong>Web de ejemplo.</strong> El negocio, la dirección y el teléfono son inventados. La hace un programa a partir de los datos reales del negocio.</div><header class="portada">
+  <div class="envoltorio">
+    <h1>Mesón Camino Real</h1>
+    <p>Cocina berciana de toda la vida, menú del día y carnes a la brasa, a dos pasos de la calle del Reloj.</p>
+    <a class="boton" href="https://wa.me/34600000333">Escribir por WhatsApp</a>
+  </div>
+</header>
+<nav class="menu" aria-label="Secciones">
+  <div class="envoltorio"><ul><li><a href="#carta">Carta</a></li><li><a href="#horario">Horario</a></li><li><a href="#donde">Dónde estamos</a></li></ul></div>
+</nav>
+<main>
+<section id="carta"><div class="envoltorio"><h2>Nuestra carta</h2><div class="rejilla"><article class="tarjeta"><h3>Para empezar</h3><div class="plato"><strong>Tabla de embutidos del Bierzo<small>Cecina, chorizo y botillo, para dos</small></strong><span class="precio">14 €</span></div><div class="plato"><strong>Pimientos asados<small>Con aceite de oliva y ajo</small></strong><span class="precio">7 €</span></div><div class="plato"><strong>Sopa de castañas<small>Receta de otoño</small></strong><span class="precio">6 €</span></div></article><article class="tarjeta"><h3>Platos principales</h3><div class="plato"><strong>Botillo del Bierzo<small>Con patata, garbanzo y berza. Jueves a domingo</small></strong><span class="precio">15 €</span></div><div class="plato"><strong>Chuletón de vaca vieja<small>A la brasa, para dos, con guarnición</small></strong><span class="precio">42 €</span></div><div class="plato"><strong>Trucha del Cúa<small>A la plancha con jamón y pimientos</small></strong><span class="precio">16 €</span></div><div class="plato"><strong>Menú del día<small>Primero, segundo, postre, pan y bebida. De martes a viernes</small></strong><span class="precio">14 €</span></div></article><article class="tarjeta"><h3>Postres</h3><div class="plato"><strong>Tarta de Santiago<small>Con helado de leche merengada</small></strong><span class="precio">5 €</span></div><div class="plato"><strong>Arroz con leche<small>Con canela y azúcar tostado</small></strong><span class="precio">4 €</span></div></article></div></div></section>
+<section id="horario"><div class="envoltorio"><h2>Horario</h2><table class="horario"><tr class="cerrado"><td>Lunes</td><td>Cerrado</td></tr><tr><td>Martes</td><td>13:00 – 16:00</td></tr><tr><td>Miércoles</td><td>13:00 – 16:00 y 20:30 – 23:00</td></tr><tr><td>Jueves</td><td>13:00 – 16:00 y 20:30 – 23:00</td></tr><tr><td>Viernes</td><td>13:00 – 16:00 y 20:30 – 23:30</td></tr><tr><td>Sábado</td><td>13:00 – 16:30 y 20:30 – 23:30</td></tr><tr><td>Domingo</td><td>13:00 – 16:30</td></tr></table><p>Reservas por WhatsApp. Grupos de más de 8 personas, avisad con un día.</p></div></section>
+<section id="donde">
+  <div class="envoltorio">
+    <h2>Dónde estamos</h2>
+    <p>Plaza del Ayuntamiento, 3, 24401 Ponferrada, León</p>
+    <p><a class="boton secundario" href="https://www.google.com/maps/search/?api=1&amp;query=Plaza+del+Ayuntamiento,+3,+24401+Ponferrada,+León">Ver en el mapa</a></p>
+    <p><a class="boton secundario" href="tel:987000333">Llamar al 987 000 333</a></p>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="envoltorio">
+    <p><strong>Mesón Camino Real</strong> · Plaza del Ayuntamiento, 3, 24401 Ponferrada, León · 987 000 333</p>
+    <p>Aviso legal: esta web no usa cookies ni recoge datos personales.
+    Titular: Mesón Camino Real (negocio de ejemplo).</p>
+    <p>Web hecha por SiteSmith.</p>
+  </div>
+</footer>
+<a class="boton-flotante" href="https://wa.me/34600000333">WhatsApp</a>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Mesón Camino Real", "description": "Cocina berciana de toda la vida, menú del día y carnes a la brasa, a dos pasos de la calle del Reloj.", "telephone": "987 000 333", "address": {"@type": "PostalAddress", "streetAddress": "Plaza del Ayuntamiento, 3, 24401 Ponferrada, León", "addressCountry": "ES"}, "url": "./", "hasMenu": "#carta", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Tuesday", "description": "13:00 – 16:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Wednesday", "description": "13:00 – 16:00 y 20:30 – 23:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Thursday", "description": "13:00 – 16:00 y 20:30 – 23:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Friday", "description": "13:00 – 16:00 y 20:30 – 23:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Saturday", "description": "13:00 – 16:30 y 20:30 – 23:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Sunday", "description": "13:00 – 16:30"}]}</script>
+</body>
+</html>

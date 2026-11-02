@@ -193,7 +193,15 @@ def generar(datos: dict, salida: Path) -> Path:
         color_css = ""
 
     enlaces_nav = []
-    for ancla, etiqueta in (("#carta", "Carta"), ("#horario", "Horario"), ("#donde", "Dónde estamos")):
+    # El nombre de la sección se adapta al sector: «Nuestra carta» en bares y
+    # restaurantes, «Servicios» o «Cuotas» en peluquerías y gimnasios.
+    titulo_carta = datos.get("titulo_carta") or "Nuestra carta"
+    etiqueta_carta = datos.get("etiqueta_carta") or (
+        "Carta" if titulo_carta == "Nuestra carta" else titulo_carta
+    )
+
+    for ancla, etiqueta in (("#carta", etiqueta_carta), ("#horario", "Horario"),
+                            ("#donde", "Dónde estamos")):
         if ancla == "#carta" and not datos.get("carta"):
             continue
         enlaces_nav.append(f'<li><a href="{ancla}">{etiqueta}</a></li>')
@@ -201,7 +209,7 @@ def generar(datos: dict, salida: Path) -> Path:
     seccion_carta = ""
     if datos.get("carta"):
         seccion_carta = (
-            '<section id="carta"><div class="envoltorio"><h2>Nuestra carta</h2>'
+            f'<section id="carta"><div class="envoltorio"><h2>{e(titulo_carta)}</h2>'
             f'<div class="rejilla">{tarjetas_carta(datos["carta"])}</div></div></section>'
         )
 

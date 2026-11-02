@@ -140,6 +140,25 @@ class AgenteTest(unittest.TestCase):
         self.assertFalse(informe["pasos"][0]["ok"])
         self.assertIn("tel", " ".join(informe["problemas"]))
 
+    def test_todos_los_ejemplos_se_generan_y_pasan_la_revision(self):
+        """Cada JSON de `negocios/` tiene que salir bien: es lo que se publica."""
+        ejemplos = sorted((RAIZ / "negocios").glob("*.json"))
+        self.assertGreaterEqual(len(ejemplos), 4)
+        for fichero in ejemplos:
+            datos = json.loads(fichero.read_text(encoding="utf-8"))
+            informe = agente.trabajar(datos, Path("/tmp/opencode/prueba-ejemplos") / fichero.stem)
+            self.assertTrue(informe["ok"], f"{fichero.name}: {informe['problemas']}")
+
+    def test_el_titulo_de_seccion_se_adapta_al_sector(self):
+        """Una peluquería no tiene «carta»: tiene «servicios y precios»."""
+        datos = json.loads((RAIZ / "negocios" / "peluqueria-luz.json").read_text(encoding="utf-8"))
+        salida = Path("/tmp/opencode/prueba-titulo")
+        agente.trabajar(datos, salida)
+        html = (salida / "index.html").read_text(encoding="utf-8")
+        self.assertIn("<h2>Servicios y precios</h2>", html)
+        self.assertIn('href="#carta">Servicios</a>', html)
+        self.assertNotIn("Nuestra carta", html)
+
 
 if __name__ == "__main__":
     unittest.main()

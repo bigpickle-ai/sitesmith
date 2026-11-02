@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bierzo Fitness — Gimnasio y entrenamiento</title>
+<meta name="description" content="Gimnasio de barrio en Ponferrada: sala de musculación, clases dirigidas y entrenador para empezar sin miedo.">
+<meta property="og:title" content="Bierzo Fitness">
+<meta property="og:description" content="Gimnasio de barrio en Ponferrada: sala de musculación, clases dirigidas y entrenador para empezar sin miedo.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f766e">
+<style>:root{
+  --tinta:#1a1613; --papel:#fbf8f3; --suave:#6f6459; --linea:#e2d9cc;
+  --acento:#7a1f1f; --acento-texto:#ffffff; --tarjeta:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --tinta:#f3ede4; --papel:#14110f; --suave:#b6a99a; --linea:#332c26;
+         --acento:#e0705f; --acento-texto:#1a1210; --tarjeta:#1d1917; }
+}
+*{box-sizing:border-box}
+html{font-size:19px;scroll-behavior:smooth}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 .4em}
+h1{font-size:2.6rem}h2{font-size:1.9rem}h3{font-size:1.25rem}
+a{color:var(--acento)}
+img{max-width:100%;height:auto;border-radius:12px}
+.envoltorio{max-width:960px;margin:0 auto;padding:0 20px}
+header.portada{background:var(--acento);color:var(--acento-texto);padding:56px 0 48px}
+header.portada p{margin:.4em 0 1.4em;font-size:1.15rem;opacity:.92}
+nav.saltar a{color:inherit}
+.boton{display:inline-block;padding:16px 26px;border-radius:12px;font-weight:700;
+  text-decoration:none;background:var(--acento);color:var(--acento-texto);
+  border:2px solid currentColor;font-size:1.05rem}
+header.portada .boton{background:var(--acento-texto);color:var(--acento);border-color:transparent}
+.boton.secundario{background:transparent;color:var(--acento)}
+section{padding:52px 0;border-top:1px solid var(--linea)}
+nav.menu{position:sticky;top:0;background:var(--papel);border-bottom:1px solid var(--linea);z-index:5}
+nav.menu ul{display:flex;gap:6px;list-style:none;margin:0;padding:10px 0;overflow-x:auto}
+nav.menu a{padding:10px 14px;border-radius:10px;text-decoration:none;color:var(--tinta);white-space:nowrap}
+nav.menu a:hover{background:var(--linea)}
+.rejilla{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.tarjeta{background:var(--tarjeta);border:1px solid var(--linea);border-radius:14px;padding:18px}
+.plato{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dotted var(--linea)}
+.plato:last-child{border-bottom:0}
+.plato strong{font-weight:600}
+.plato span.precio{white-space:nowrap;font-variant-numeric:tabular-nums}
+.plato small{display:block;color:var(--suave);font-size:.9rem}
+table.horario{width:100%;border-collapse:collapse}
+table.horario td{padding:8px 0;border-bottom:1px solid var(--linea)}
+table.horario td:last-child{text-align:right;color:var(--suave)}
+tr.cerrado td{color:var(--suave);font-style:italic}
+a:focus-visible,.boton:focus-visible,nav.menu a:focus-visible{
+  outline:3px solid var(--acento);outline-offset:3px;border-radius:8px}
+.aviso-demo{background:#fff3cd;color:#4a3b00;border-bottom:3px solid #e0a800;
+  padding:14px 20px;font-size:1rem;text-align:center;line-height:1.5}
+@media (prefers-color-scheme: dark){
+  .aviso-demo{background:#3a2f00;color:#ffe9a8;border-bottom-color:#e0a800}
+}
+footer{padding:36px 0 120px;color:var(--suave);font-size:.9rem;border-top:1px solid var(--linea)}
+.boton-flotante{position:fixed;right:18px;bottom:18px;z-index:20;border-radius:999px;
+  padding:16px 22px;background:var(--acento);color:var(--acento-texto);
+  text-decoration:none;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+@media (max-width:600px){ html{font-size:18px} h1{font-size:2rem} header.portada{padding:40px 0 34px} }
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+:root{--acento:#0f766e;--acento-texto:#ffffff}@media (prefers-color-scheme: dark){:root{--acento:#16aca1;--acento-texto:#12100e}}</style>
+</head>
+<body>
+<div class="aviso-demo"><strong>Web de ejemplo.</strong> El negocio, la dirección y el teléfono son inventados. La hace un programa a partir de los datos reales del negocio.</div><header class="portada">
+  <div class="envoltorio">
+    <h1>Bierzo Fitness</h1>
+    <p>Gimnasio de barrio en Ponferrada: sala de musculación, clases dirigidas y entrenador para empezar sin miedo.</p>
+    <a class="boton" href="https://wa.me/34600000222">Escribir por WhatsApp</a>
+  </div>
+</header>
+<nav class="menu" aria-label="Secciones">
+  <div class="envoltorio"><ul><li><a href="#carta">Cuotas</a></li><li><a href="#horario">Horario</a></li><li><a href="#donde">Dónde estamos</a></li></ul></div>
+</nav>
+<main>
+<section id="carta"><div class="envoltorio"><h2>Cuotas y servicios</h2><div class="rejilla"><article class="tarjeta"><h3>Cuotas mensuales</h3><div class="plato"><strong>Sala de musculación<small>Acceso libre en todo el horario</small></strong><span class="precio">29 €/mes</span></div><div class="plato"><strong>Sala + clases dirigidas<small>Spinning, zumba y funcional</small></strong><span class="precio">39 €/mes</span></div><div class="plato"><strong>Matrícula<small>Gratis este mes</small></strong><span class="precio">0 €</span></div><div class="plato"><strong>Bono de 10 sesiones<small>Para quien viene de vez en cuando</small></strong><span class="precio">55 €</span></div></article><article class="tarjeta"><h3>Clases</h3><div class="plato"><strong>Spinning<small>45 minutos, de lunes a jueves a las 20:00</small></strong><span class="precio">Incluido</span></div><div class="plato"><strong>Funcional<small>Fuerza y movilidad, martes y jueves a las 19:00</small></strong><span class="precio">Incluido</span></div><div class="plato"><strong>Zumba<small>Sábados a las 11:00</small></strong><span class="precio">Incluido</span></div></article><article class="tarjeta"><h3>Entrenamiento personal</h3><div class="plato"><strong>Sesión individual<small>Una hora con entrenador</small></strong><span class="precio">25 €</span></div><div class="plato"><strong>Bono de 8 sesiones<small>Plan de entrenamiento incluido</small></strong><span class="precio">170 €</span></div></article></div></div></section>
+<section id="horario"><div class="envoltorio"><h2>Horario</h2><table class="horario"><tr><td>Lunes</td><td>07:00 – 22:30</td></tr><tr><td>Martes</td><td>07:00 – 22:30</td></tr><tr><td>Miércoles</td><td>07:00 – 22:30</td></tr><tr><td>Jueves</td><td>07:00 – 22:30</td></tr><tr><td>Viernes</td><td>07:00 – 22:00</td></tr><tr><td>Sábado</td><td>09:00 – 14:00</td></tr><tr class="cerrado"><td>Domingo</td><td>Cerrado</td></tr></table><p>El primer día te enseñamos las instalaciones y te preparamos una tabla. Sin matrícula hasta final de mes.</p></div></section>
+<section id="donde">
+  <div class="envoltorio">
+    <h2>Dónde estamos</h2>
+    <p>Calle Compostilla, 8, 24404 Ponferrada, León</p>
+    <p><a class="boton secundario" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Compostilla,+8,+24404+Ponferrada,+León">Ver en el mapa</a></p>
+    <p><a class="boton secundario" href="tel:987000222">Llamar al 987 000 222</a></p>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="envoltorio">
+    <p><strong>Bierzo Fitness</strong> · Calle Compostilla, 8, 24404 Ponferrada, León · 987 000 222</p>
+    <p>Aviso legal: esta web no usa cookies ni recoge datos personales.
+    Titular: Bierzo Fitness (negocio de ejemplo).</p>
+    <p>Web hecha por SiteSmith.</p>
+  </div>
+</footer>
+<a class="boton-flotante" href="https://wa.me/34600000222">WhatsApp</a>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HealthClub", "name": "Bierzo Fitness", "description": "Gimnasio de barrio en Ponferrada: sala de musculación, clases dirigidas y entrenador para empezar sin miedo.", "telephone": "987 000 222", "address": {"@type": "PostalAddress", "streetAddress": "Calle Compostilla, 8, 24404 Ponferrada, León", "addressCountry": "ES"}, "url": "./", "hasMenu": "#carta", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Monday", "description": "07:00 – 22:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Tuesday", "description": "07:00 – 22:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Wednesday", "description": "07:00 – 22:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Thursday", "description": "07:00 – 22:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Friday", "description": "07:00 – 22:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Saturday", "description": "09:00 – 14:00"}]}</script>
+</body>
+</html>

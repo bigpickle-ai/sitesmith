@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SiteSmith — ejemplos de webs</title>
+<link rel="stylesheet" href="../demo/estilos.css">
+<style>
+  .tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .tarjeta { background: var(--panel); border: 2px solid var(--borde); border-radius: 16px; padding: 22px; }
+  .tarjeta h2 { margin: 0 0 4px; font-size: 1.3rem; }
+  .tarjeta p { color: var(--tenue); margin: 0 0 14px; }
+  .tarjeta ul { margin: 0 0 18px; padding-left: 20px; color: var(--tenue); font-size: 1rem; }
+  .volver { margin: 12px 0 0; }
+</style>
+</head>
+<body>
+<header>
+  <div class="envoltorio">
+    <h1>Ejemplos de webs</h1>
+    <p>Tres negocios inventados, cada uno de un sector distinto. Mismo programa, mismo día de trabajo.</p>
+  </div>
+</header>
+<main class="envoltorio" style="padding-top:24px;padding-bottom:48px">
+  <div class="tarjetas">
+    <article class="tarjeta">
+      <h2>Bar La Encina</h2>
+      <p>Bar de tapas y cocina casera</p>
+      <ul>
+        <li>Carta con 10 platos y precios</li>
+        <li>Horario de martes a domingo</li>
+        <li>Botón de WhatsApp y de llamada</li>
+      </ul>
+      <a class="boton" href="bar-ejemplo/">Ver la web</a>
+    </article>
+    <article class="tarjeta">
+      <h2>Peluquería Luz</h2>
+      <p>Peluquería y estética</p>
+      <ul>
+        <li>Servicios y precios por secciones</li>
+        <li>Horario con cita previa</li>
+        <li>Sección «Servicios» en vez de «Carta»</li>
+      </ul>
+      <a class="boton" href="peluqueria-luz/">Ver la web</a>
+    </article>
+    <article class="tarjeta">
+      <h2>Bierzo Fitness</h2>
+      <p>Gimnasio de barrio</p>
+      <ul>
+        <li>Cuotas, clases y entrenamiento personal</li>
+        <li>Horario de 07:00 a 22:30</li>
+        <li>Sección «Cuotas»</li>
+      </ul>
+      <a class="boton" href="gimnasio-bierzo/">Ver la web</a>
+    </article>
+    <article class="tarjeta">
+      <h2>Mesón Camino Real</h2>
+      <p>Restaurante de cocina berciana</p>
+      <ul>
+        <li>Carta con menú del día y brasa</li>
+        <li>Horario de comidas y cenas</li>
+        <li>Aviso legal y datos para Google</li>
+      </ul>
+      <a class="boton" href="meson-camino-real/">Ver la web</a>
+    </article>
+  </div>
+
+  <p class="volver tenue">Los cuatro negocios son inventados: llevan una banda amarilla
+  que lo avisa. Ninguno tiene cliente detrás.</p>
+  <p><a class="boton secundario" href="../demo/">Generar una web nueva</a></p>
+</main>
+<footer>
+  <div class="envoltorio">
+    <p>SiteSmith — <a href="https://github.com/bigpickle-ai/sitesmith">código en GitHub</a></p>
+  </div>
+</footer>
+</body>
+</html>
