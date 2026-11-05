@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Relay landing page template | SiteSmith</title>
+<link rel="stylesheet" href="../../demo/estilos.css">
+<style>
+  .muestra { background: #2a2110; border-bottom: 2px solid #d9a441; padding: 12px 20px; text-align: center; font-size: 1rem; color: #ffd479; }
+  .hero { padding: 64px 0 40px; text-align: center; }
+  .hero h1 { font-size: clamp(2rem, 5.6vw, 3.4rem); line-height: 1.06; margin: 0 0 16px; letter-spacing: -1px; }
+  .hero .sub { font-size: clamp(1.05rem, 2.2vw, 1.35rem); color: var(--tenue); max-width: 760px; margin: 0 auto 22px; }
+  .caja { display: inline-block; background: var(--panel); border: 2px solid var(--acento); border-radius: 18px; padding: 18px 30px; margin: 6px 0 22px; }
+  .caja .grande { display: block; font-size: 2.3rem; font-weight: 700; }
+  .caja .peque { color: var(--tenue); font-size: 1rem; }
+  .acciones { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .acciones .boton { margin-top: 0; }
+  .secundario { background: transparent; border: 2px solid var(--borde); color: var(--texto); }
+  .datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 34px 0 0; text-align: center; }
+  .datos div { background: var(--panel); border: 2px solid var(--borde); border-radius: 14px; padding: 18px; }
+  .datos strong { display: block; font-size: 1.8rem; color: var(--acento); }
+  .datos span { color: var(--tenue); font-size: .95rem; }
+  h2.seccion { font-size: 1.85rem; margin: 52px 0 8px; }
+  .tres { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
+  .tres article { background: var(--panel); border: 2px solid var(--borde); border-radius: 16px; padding: 24px; }
+  .tres h3 { margin: 0 0 8px; font-size: 1.3rem; }
+  .tres p { margin: 0; color: var(--tenue); }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+  th, td { text-align: left; padding: 14px 10px; border-bottom: 1px solid var(--borde); }
+  th { color: var(--tenue); font-weight: 600; }
+  .si { color: var(--bien); font-weight: 700; }
+  .no { color: var(--mal); }
+  .faq p { margin: 0 0 16px; }
+  .faq b { color: #ffd479; }
+  .pie { margin-top: 56px; padding-top: 22px; border-top: 2px solid var(--borde); color: var(--tenue); font-size: .95rem; }
+  .pie a { color: var(--acento); }
+</style>
+</head>
+<body>
+
+<div class="muestra">
+  Demo by <strong>SiteSmith</strong> · Fictional relay · Personalised with your name and price ·
+  <a href="../../btc/en/" style="color:#ffd479">Buy for 14,000 sats</a>
+</div>
+
+<header class="hero envoltorio">
+  <h1>A relay that never loses your notes</h1>
+  <p class="sub">North Relay stores your notes, serves them fast, and never makes you open five
+     connections to read one thread. Pay once and stop thinking about it.</p>
+
+  <div class="caja">
+    <span class="grande">7.000 sats</span>
+    <span class="peque">one time · no subscription · pay from your wallet</span>
+  </div>
+
+  <div class="acciones">
+    <a class="boton" href="#join">Join the relay</a>
+    <a class="boton secundario" href="#why">What I get</a>
+  </div>
+
+  <div class="datos">
+    <div><strong>3</strong><span>regions with a copy</span></div>
+    <div><strong>99,9 %</strong><span>uptime</span></div>
+    <div><strong>0</strong><span>ads, no tracking</span></div>
+  </div>
+</header>
+
+<main class="envoltorio" style="padding-bottom:56px">
+
+  <h2 class="seccion" id="why">What changes for you</h2>
+  <div class="tres">
+    <article>
+      <h3>Your notes show up</h3>
+      <p>No waiting, no gaps: the relay answers from the nearest region and replicates what
+         you post. If one node fails, another keeps serving.</p>
+    </article>
+    <article>
+      <h3>Your DMs stay private</h3>
+      <p>DMs are stored encrypted and only the right person can read them. No public index of
+         conversations.</p>
+    </article>
+    <article>
+      <h3>One fee, not a trap</h3>
+      <p>7,000 sats once. No auto-renewal, no card, no fine print. If I ever shut it down,
+         your keys are still yours.</p>
+    </article>
+  </div>
+
+  <h2 class="seccion">Free or paid</h2>
+  <table>
+    <tr><th>&nbsp;</th><th>Free public relay</th><th>North Relay</th></tr>
+    <tr><td>Notes stored</td><td>until it fills up</td><td class="si">copies in 3 regions</td></tr>
+    <tr><td>Velocidad</td><td>whatever you get</td><td class="si">dedicated server</td></tr>
+    <tr><td>Spam and noise</td><td class="no">no filtering</td><td class="si">filtered</td></tr>
+    <tr><td>Precio</td><td>0</td><td>7,000 sats, once</td></tr>
+  </table>
+
+  <h2 class="seccion" id="join">Signing up takes a minute</h2>
+  <ol class="pasos">
+    <li><strong>Copy the address</strong> <code>wss://relay.ejemplo.com</code>.</li>
+    <li><strong>Paste it</strong> into your Nostr client, in the relay list.</li>
+    <li><strong>Paga</strong> from your wallet and post: you are in.</li>
+  </ol>
+
+  <h2 class="seccion">Questions before paying</h2>
+  <div class="faq">
+    <p><b>Can I go back?</b> Yes. A relay is one more connection; your keys and notes are not
+       locked in.</p>
+    <p><b>What if the relay shuts down?</b> Your notes stay on the other relays where you published them.
+       This is one more copy, not a cage.</p>
+    <p><b>How do I know you cannot read my DMs?</b> DMs are end-to-end encrypted; the relay only sees envelopes.</p>
+    <p><b>Can I pay by card?</b> No. Bitcoin, Lightning or on-chain. If you need an invoice,
+       this relay is not for you.</p>
+  </div>
+
+  <div class="pie">
+    Sample page made by <a href="../../btc/en/">SiteSmith</a>. “North Relay” is fictional:
+    it shows what yours could look like. Personalised with your name, price, address and real
+    details for 14,000 sats.
+  </div>
+</main>
+</body>
+</html>
