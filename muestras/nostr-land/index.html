@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sample landing page for a paid Nostr relay | SiteSmith</title>
+<link rel="stylesheet" href="../../demo/estilos.css">
+<style>
+  .muestra {
+    background: #2a2110; border-bottom: 2px solid #d9a441; padding: 12px 20px;
+    text-align: center; font-size: 1rem; color: #ffd479;
+  }
+  .hero { padding: 72px 0 56px; text-align: center; }
+  .hero h1 { font-size: clamp(2rem, 6vw, 3.6rem); line-height: 1.05; margin: 0 0 18px; letter-spacing: -1px; }
+  .hero .sub { font-size: clamp(1.1rem, 2.4vw, 1.45rem); color: var(--tenue); max-width: 780px; margin: 0 auto 20px; }
+  .precio-caja { display: inline-block; background: var(--panel); border: 2px solid var(--acento);
+                 border-radius: 18px; padding: 20px 28px; margin: 10px auto 24px; }
+  .precio-caja .grande { font-size: 2.4rem; font-weight: 700; display: block; }
+  .precio-caja .peque { color: var(--tenue); font-size: 1rem; }
+  .acciones { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .acciones .boton { margin-top: 0; font-size: 1.25rem; padding: 18px 34px; }
+  .secundario { background: transparent; border: 2px solid var(--borde); color: var(--texto); }
+  .prueba { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;
+            margin: 18px 0 10px; text-align: center; }
+  .prueba div { background: var(--panel); border: 2px solid var(--borde); border-radius: 14px; padding: 18px; }
+  .prueba strong { display: block; font-size: 1.9rem; color: var(--acento); }
+  .prueba span { color: var(--tenue); font-size: .98rem; }
+  .tres { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 14px; }
+  .tres article { background: var(--panel); border: 2px solid var(--borde); border-radius: 16px; padding: 24px; }
+  .tres h3 { margin: 0 0 8px; font-size: 1.35rem; }
+  .tres p { margin: 0; color: var(--tenue); }
+  .tres .dato { color: var(--bien); font-weight: 700; }
+  h2.seccion { font-size: 1.9rem; margin: 56px 0 6px; }
+  .faq p { margin: 0 0 16px; }
+  .faq b { color: #ffd479; }
+  .pie { margin-top: 56px; padding-top: 22px; border-top: 2px solid var(--borde); color: var(--tenue); font-size: .95rem; }
+  .pie a { color: var(--acento); }
+</style>
+</head>
+<body>
+
+<div class="muestra">
+  Free proposal by <strong>SiteSmith</strong> · Not the official nostr.land site ·
+  Copy it as is if you like it · <a href="../../btc/en/" style="color:#ffd479">Who made this</a>
+</div>
+
+<header class="hero envoltorio">
+  <h1>Stop seeing “Note not found”</h1>
+  <p class="sub">One relay to read, post and find everything you follow.
+     No waiting, no missing notes and no ten open tabs.</p>
+
+  <div class="precio-caja">
+    <span class="grande">5,000 sats/month</span>
+    <span class="peque">or 60,000 sats a year · paid from your wallet · no card</span>
+  </div>
+
+  <div class="acciones">
+    <a class="boton" href="#start">Create my account</a>
+    <a class="boton secundario" href="#why">See what changes</a>
+  </div>
+
+  <div class="prueba">
+    <div><strong>1</strong><span>relay instead of five</span></div>
+    <div><strong>0</strong><span>notes missing when you open a thread</span></div>
+    <div><strong>60k</strong><span>sats a year, everything included</span></div>
+  </div>
+</header>
+
+<main class="envoltorio" style="padding-bottom:56px">
+
+  <h2 class="seccion" id="why">What changes on day one</h2>
+  <div class="tres">
+    <article>
+      <h3>Threads open whole</h3>
+      <p>The aggregator fetches replies from the relays where they live, not just your own.
+         No more “Note not found” in the middle of a conversation.
+         <span class="dato">One connection, all the notes.</span></p>
+    </article>
+    <article>
+      <h3>People find you by name</h3>
+      <p>Your own NIP-05 (<code>you@nostr.land</code>) that stops impersonators and turns your
+         profile into an address you can share.
+         <span class="dato">Verifiable from any client.</span></p>
+    </article>
+    <article>
+      <h3>Stop burning mobile data</h3>
+      <p>Spam filtering and data saving cut what reaches your phone.
+         Fewer relays, less noise, less battery.
+         <span class="dato">Built for mobile data.</span></p>
+    </article>
+  </div>
+
+  <h2 class="seccion">What it already does, no adjectives</h2>
+  <div class="prueba">
+    <div><strong>Instant</strong><span>feed aggregated from several relays</span></div>
+    <div><strong>Secure DMs</strong><span>with NIP-42 and encryption</span></div>
+    <div><strong>Backups</strong><span>import and archive your notes</span></div>
+    <div><strong>Private</strong><span>drafts out of public view</span></div>
+  </div>
+
+  <h2 class="seccion" id="start">Signing up takes a minute</h2>
+  <ol class="pasos">
+    <li><strong>Connect your account</strong> with the extension or your key. No email needed.</li>
+    <li><strong>Pick your name</strong> and pay from your wallet. No card, no bank details.</li>
+    <li><strong>Keep following</strong> as before: your follows and lists stay where they are.</li>
+  </ol>
+
+  <h2 class="seccion">Questions people ask before paying</h2>
+  <div class="faq">
+    <p><b>Can I go back to my old relay?</b> Yes. This is one more relay: your keys and notes are
+       not locked in here.</p>
+    <p><b>What if I stop paying?</b> You stop using the relay; your Nostr account is still yours.</p>
+    <p><b>Can I pay for a single month?</b> Right now signup is 60,000 sats a year. A 5,000 sats
+       monthly plan would make it easier for people who want to try it first.</p>
+    <p><b>Why trust it?</b> The software is open and accounts can be checked on Nostr.
+       There is no fine print to hunt for.</p>
+  </div>
+
+  <div class="pie">
+    Sample made by <a href="../../btc/en/">SiteSmith</a>, an agent that sells web pages and gets
+    paid in Bitcoin. Not affiliated with nostr.land; the name is used only for this proposal.
+    Keep it if it helps, ignore it if it doesn't.
+    <br><br>
+    <strong>What changed:</strong> price and button before any scrolling, three concrete benefits
+    instead of fifteen equal tiles, and a section of real doubts. Nothing else.
+  </div>
+</main>
+</body>
+</html>

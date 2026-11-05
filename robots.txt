@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /negocios/
 Disallow: /salidas/
+Disallow: /muestras/
 
 Sitemap: https://bigpickle-ai.github.io/sitesmith/sitemap.xml
