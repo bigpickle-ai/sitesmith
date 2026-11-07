@@ -3,23 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SiteSmith</title>
-<meta http-equiv="refresh" content="0; url=demo/">
+<title>SiteSmith — webs para negocios pequeños con precio cerrado</title>
+<meta name="description" content="Webs de una página para negocios pequeños: precio cerrado, lista en 3 días y una vista previa gratis antes de pagar. Ejemplos reales, guías con números y tienda en Bitcoin.">
+<link rel="canonical" href="https://bigpickle-ai.github.io/sitesmith/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SiteSmith — webs para negocios pequeños con precio cerrado">
+<meta property="og:description" content="Precio cerrado, tres días y vista previa gratis antes de pagar.">
+<meta property="og:url" content="https://bigpickle-ai.github.io/sitesmith/">
 <style>
-  :root { color-scheme: dark; }
-  body { margin: 0; min-height: 100vh; display: grid; place-items: center;
-         background: #141519; color: #f2f3f5;
-         font: 1.2rem/1.6 system-ui, "Segoe UI", Roboto, sans-serif; text-align: center; }
-  a { display: inline-block; margin-top: 18px; padding: 18px 32px; font-size: 1.3rem;
-      font-weight: 700; border-radius: 14px; background: #5b9dff; color: #06101f;
-      text-decoration: none; }
+  :root { color-scheme: dark; --fondo:#141519; --panel:#1d1f26; --texto:#f2f3f5; --tenue:#b9bdc7;
+          --acento:#5b9dff; --borde:#343844; }
+  body { margin:0; background:var(--fondo); color:var(--texto);
+         font: 1.2rem/1.6 system-ui, "Segoe UI", Roboto, sans-serif; }
+  .envoltorio { max-width: 780px; margin: 0 auto; padding: 48px 24px 64px; }
+  h1 { font-size: 2.3rem; margin: 0 0 10px; }
+  p.entradilla { color: var(--tenue); font-size: 1.25rem; margin: 0 0 32px; }
+  .rejilla { display: grid; gap: 16px; }
+  a.opcion { display: block; background: var(--panel); border: 2px solid var(--borde);
+             border-radius: 16px; padding: 22px 24px; text-decoration: none; color: var(--texto); }
+  a.opcion.principal { border-color: var(--acento); }
+  a.opcion b { display: block; font-size: 1.3rem; margin-bottom: 4px; }
+  a.opcion span { color: var(--tenue); font-size: 1.02rem; }
+  footer { color: var(--tenue); font-size: .98rem; margin-top: 40px; }
+  footer a { color: var(--tenue); }
 </style>
 </head>
 <body>
-<main>
-  <h1>SiteSmith</h1>
-  <p>Genera la web de tu negocio y revísala ejecutando código.</p>
-  <a href="demo/">Abrir la aplicación</a>
-</main>
+<div class="envoltorio">
+  <h1>La web de tu negocio, en 3 días</h1>
+  <p class="entradilla">Una página bien escrita, precio cerrado y vista previa gratis antes de pagar.
+     Para bares, peluquerías, gimnasios, talleres y proyectos pequeños.</p>
+
+  <div class="rejilla">
+    <a class="opcion principal" href="precios/">
+      <b>Ver precios y ejemplos</b>
+      <span>199 € una página completa. Qué incluye, cuánto tarda y cómo se paga.</span>
+    </a>
+    <a class="opcion" href="ejemplos/">
+      <b>Cuatro ejemplos reales</b>
+      <span>Un bar, una peluquería, un gimnasio y un mesón, hechos con el mismo sistema.</span>
+    </a>
+    <a class="opcion" href="guias/">
+      <b>Guías con números</b>
+      <span>Cuánto cuesta una web, qué poner y qué puedes ahorrarte. Sin humo.</span>
+    </a>
+    <a class="opcion" href="btc/">
+      <b>Tienda en Bitcoin</b>
+      <span>Precios en sats, pago por Lightning o en la red. Entrega por escrito.</span>
+    </a>
+    <a class="opcion" href="demo/">
+      <b>Probar el generador</b>
+      <span>Escribe los datos de tu negocio y mira la web antes de decidir nada.</span>
+    </a>
+  </div>
+
+  <footer>
+    <p>Sin cookies, sin formularios obligatorios, sin rastreadores.
+       Contacto por Nostr desde la <a href="btc/">tienda</a>.</p>
+  </footer>
+</div>
 </body>
 </html>
